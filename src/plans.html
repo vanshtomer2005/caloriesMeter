@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+
+<body class="m-0 p-0 relative">
+    <div class="  ">
+         <div id="dragmenu" class="  bg-[#1113139c] transition-all duration-1000 absolute left-[-100%] z-20 w-full h-full">
+           <div id="disablemenu" class=" pt-1 ring-2 ring-[#a5a2a2b4] pb-0.5 px-2.5 rounded-full float-end  box-border mx-3 my-3 bg-amber-50 text-center"><i class=" font-light fa-solid fa-xmark text-[15px] "></i></div>
+        <ul id="menuchange"
+        class="  font-semibold  text-black max-md:fixed w-full top-1/2 bottom-1/2   max-md:flex z-30 max-md:justify-center max-md:flex-col max-md:align-middle   text-center  text-xl gap-30  ">
+
+        <li class=" cursor-pointer"><a href="./index.html">Home</a></li>
+        <li id="plansec" onclick="window.location.href= 'plans.html?passkey=true'" class="  cursor-pointer">Plans</li>
+        <li onclick="window.location.href= 'food_search.html?highlight=true'" id="foodsection" class=" cursor-pointer">
+            Search Food</li>
+    </ul>
+    </div>
+    <div id="plain-container">
+
+        <!-- Header -->
+        <div  class= " bg-[#ffd294]  max-md:bg-[#f09e336b] z-10 relative footer-section transition-transform duration-600 translate-y-[-150%] flex justify-evenly align-middle text-xl font-bold py-3 text-white max-md:justify-between  max-md:text-sm max-md:px-3"
+            id="top-bar">
+            <ul class="flex justify-center my-1.5 align-middle">
+                <li id="menubtn" class="max-md:block hidden max-md:mt-0.5  max-md:mr-2  font-medium whitespace-nowrap ">
+                        <img class="" src="/assets/images/menu.svg" alt="" srcset="">
+                    </li>
+                <li class="font-medium text-black "><a href="/src/index.html">Calories Calculater</a></li>
+            </ul>
+             <ul class="flex max-md:hidden w-[60%] my-1.5 justify-around align-middle text-lg block  max-md:absolute max-md:left-[-50%]  max-md:top-0 max-md:px-0 ">
+                <div class="flex max-md:block font-normal text-black gap-10 mr-10">
+
+                    <li class=" cursor-pointer flex justify-center align-middle"><a href="./index.html">Home</a></li>
+                    <li id="plansec" onclick="window.location.href= 'plans.html?passkey=true'" class="  cursor-pointer flex justify-center align-middle">Plans</li>
+                    <li onclick="window.location.href= 'food_search.html?highlight=true'" id="foodsection"
+                        class=" cursor-pointer flex justify-center align-middle">Search Food</li> 
+                </div>
+            </ul>
+
+            <ul>
+                <button class="font-medium border-2 text-black  px-4 py-1.5 rounded-xl border-amber-50  shadow-inner shadow-black text-black-50/500 text-black bg-amber-50 max-md:px-2 max-md:py-0.5 max-md:mt-0.5 max-md:text-[12px]  max-md:rounded-md "> <a
+                        href="/login.html">Log In</a> </button>
+            </ul>
+        </div>
+        <!-- The Inner-container -->
+        <div class="outer-container bg-[#ffd148]   py-14 px-40 max-md:px-10">
+            <div class="svg-img   ">
+                <img class=" h-[52rem]  fixed right-[-380px] top-[-6%]  z-0 max-md:right-0 max-md:top-0 max-md:bg-[#e4c386ea]" src="/assets/images/award-09.svg" alt=""
+                    srcset="">
+            </div>
+
+            <div class="inner-container bg-[#fff9] px-10 py-20 flex  rounded-3xl max-md:rouded-2xl relative z-10 max-md:block max-md:py-10 max-md:px-8">
+
+                <!-- PLAN heading -->
+                <div class="heading opacity-0 transition-all duration-300 " id="Plan-heading">
+                    <h2 class=" text-2xl font-semibold font-mono max-md:text-lg max-md:text-center">Plans</h2>
+                    <p class="font-light py-2 max-md:text-sm max-md:py-4 max-md:text-center  " > We’re excited to help you on your journey!<br>
+                        <br>
+                        No matter where you're starting from, there's a plan that's made just for you.
+                    </p>
+                </div>
+
+                <!-- PLAN-cards -->
+                <div class="cards  flex  align-middle max-md:block ">
+                    <div class="card  mx-2 py-6 px-20 opacity-0 delay-75 duration-1000  ease-in transition-all bg-white rounded-xl max-md:py-9 max-md:px-5 max-md:mx-1 max-md:my-8 max-md:rounded-xl"
+                        id="first-card">
+                        <p class=" text-lg text-center font-medium py-4  max-md:py-2
+                         max-md:text-[15px] ">Silver Block</p>
+                        <h2 class="text-xl text-center  font-bold max-md:text-[19px]">$250</h2>
+                        <button class="bg-[#13181f] rounded-xl text-white px-9 py-1.5 whitespace-nowrap max-md:rounded-sm  my-10 max-md:px-3 max-md:py-0.5 max-md:my-6 max-md:text-sm max-md:mx-14.5">Get
+                            plan</button>
+                        <div class="plan-info max-md:mx-3 ">
+                            <ul class=" list-disc px-6 max-md:text-sm max-md:grid max-md:grid-rows-3 max-md:gap-x-7  max-md:gap-y-2 max-md:grid-cols-2">
+                                <li class="">fact 1</li>
+                                <li>fact 2</li>
+                                <li>fact 3</li>
+                                <li class="line-through">fact 3</li>
+                                <li class="line-through">fact 3</li>
+                                <li class="line-through">fact 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card  mx-2 py-6 px-20 bg-white opacity-0 delay-300 duration-1000 ease-in  transition-all rounded-xl max-md:py-9 max-md:px-5 max-md:mx-1 max-md:my-8 max-md:rounded-xl"
+                        id="second-card">
+                        <p class=" text-lg text-center font-medium py-4 max-md:py-2
+                         max-md:text-[15px] ">Diamond Block</p>
+                        <h2 class="text-xl text-center  font-bold  max-md:text-[19px]">$250</h2>
+                        <button class="bg-[#13181f] rounded-xl text-white px-9 py-1.5 whitespace-nowrap max-md:rounded-sm  my-10 max-md:px-3 max-md:py-0.5 max-md:my-6 max-md:text-sm max-md:mx-14.5">Get
+                            plan</button>
+                        <div class="plan-info max-md:mx-3">
+                            <ul class=" list-disc px-6 max-md:text-sm max-md:grid max-md:grid-rows-3 max-md:gap-x-7  max-md:gap-y-2 max-md:grid-cols-2">
+                                <li>fact 1</li>
+                                <li>fact 2</li>
+                                <li>fact 3</li>
+                                <li>fact 3</li>
+                                <li>fact 3</li>
+                                <li>fact 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card  mx-2 py-6 px-20 bg-white rounded-xl opacity-0 delay-600 duration-1000 ease-in transition-all max-md:py-9 max-md:px-5 max-md:mx-1 max-md:mt-8 max-md:rounded-xl"
+                        id="third-card">
+                        <p class=" text-lg text-center font-medium py-4   max-md:py-2
+                         max-md:text-[15px] ">Gold Block</p>
+                        <h2 class="text-xl text-center  font-bold max-md:text-[19px]">$250</h2>
+                        <button class="bg-[#13181f] rounded-xl text-white px-9 py-1.5 whitespace-nowrap  my-10 max-md:rounded-sm  my-10 max-md:px-3 max-md:py-0.5 max-md:my-6 max-md:text-sm max-md:mx-14.5" >Get
+                            plan</button>
+                        <div class="plan-info max-md:mx-3">
+                            <ul class=" list-disc px-6 max-md:text-sm max-md:grid max-md:grid-rows-3 max-md:gap-x-7  max-md:gap-y-2 max-md:grid-cols-2">
+                                <li>fact 1</li>
+                                <li>fact 2</li>
+                                <li>fact 3</li>
+                                <li>fact 3</li>
+                                <li class="line-through">fact 3</li>
+                                <li class="line-through">fact 3</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/assets/js/main.js"></script>
+
+</html>

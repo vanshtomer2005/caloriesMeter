@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="./output.css" rel="stylesheet">
+
+
+</head>
+<style>
+    td {
+        padding: 15px 80px;
+        background: rgb(251, 227, 197);
+        border-right: 1px solid;
+
+    }
+
+    tr {
+        border: 1px solid;
+        background-color: rgb(133, 226, 131);
+    }
+
+    th {
+        border-right: 1px solid;
+        padding: 15px;
+        background-color: rgb(253 230 138);
+
+
+    }
+</style>
+
+<body class=" m-0 p-0 relative">
+    <div id="dragmenu" class="  bg-[#1213139c] transition-all duration-1000  absolute left-[-100%] z-10 w-full h-full">
+        <div id="disablemenu"
+            class=" pt-1 ring-2 ring-[#a5a2a2b4] pb-0.5 px-2.5 rounded-full float-end  box-border mx-3 my-3 bg-amber-50 text-center">
+            <i class=" font-light fa-solid fa-xmark text-[15px] "></i></div>
+        <ul id="menuchange"
+            class="  font-semibold  text-white max-md:fixed w-full top-1/2 bottom-1/2   max-md:flex z-30 max-md:justify-center max-md:flex-col max-md:align-middle   text-center  text-xl gap-30  ">
+
+            <li class=" cursor-pointer"><a href="./index.html">Home</a></li>
+            <li onclick="window.location.href= 'plans.html?passkey=true'" class="  cursor-pointer">Plans</li>
+            <li onclick="window.location.href= 'food_search.html?highlight=true'" id="foodsection"
+                class=" cursor-pointer">
+                Search Food</li>
+        </ul>
+
+    </div>
+    <div id="main-container">
+        <div class="inner-container bg-[#111827] py-3 max-md:w-screen">
+
+            <!-- The Header -->
+            <div class="footer-section transition-all duration-600  max-md:justify-between translate-y-[-150%] flex justify-around align-middle text-xl max-md:text-sm max-md:px-3 font-bold text-white max-md:h-full"
+                id="top-bar">
+                <ul class="flex ">
+                    <li id="menubtn" class="max-md:block hidden max-md:mt-0.5 max-md:invert max-md:mr-2  font-medium whitespace-nowrap ">
+                        <img class=" text-amber-50" src="/assets/images/menu.svg" alt="" srcset="">
+                    </li>
+                    <li class=" max-md:mt-0.5 font-medium whitespace-nowrap "><a href="/src/index.html">Calories
+                            Calculater</a></li>
+                </ul>
+                <ul id="menuoption"
+                    class="flex font-normal max-md:hidden  max-md:absolute    max-md:bg-amber-400    max-md:px-0 justify-around align-middle text-lg gap-13 py-1.5 px-[200px] ">
+
+                    <li class=" cursor-pointer"><a href="./index.html">Home</a></li>
+                    <li onclick="window.location.href= 'plans.html?passkey=true'" class="  cursor-pointer">Plans
+                    </li>
+                    <li onclick="window.location.href= 'food_search.html?highlight=true'" id="foodsection"
+                        class=" cursor-pointer">Search Food</li>
+                </ul>
+
+                <ul>
+                    <button
+                        class="font-medium  max-md:px-2 max-md:py-0.5 max-md:text-[10px]  max-md:rounded-md border-2 py-1.5  px-4  rounded-xl border-amber-50 whitespace-nowrap text-black bg-amber-50 ">
+                        <a href="/login.html">Log In</a> </button>
+                </ul>
+            </div>
+
+            <!-- The Main Heading -->
+            <div class="Main-heading text-center    ">
+                <div class="text-5xl max-md:text-xl font-bold opacity-0 text-white font-mono pt-3 pb-5 transition-all duration-500 transform translate-y-0 "
+                    id="upper-heading">
+                    PHAMILY
+                </div>
+                <div class="text-center  text-white font-normal px-70 max-md:px-13 ">
+                    <p class="opacity-0 max-md:text-[7px] transition-all duration-800 transform translate-y-0"
+                        id="sub-heading">Over 70%
+                        of deaths in India are due to
+                        non-communicable
+                        diseases like diabetes, heart disease, and cancer (WHO, 2023). Additionally, around 189
+                        million
+                        Indians are undernourished, making malnutrition a major public health concern (FAO, 2023).
+                    </p>
+                    <div class="button text-white  flex justify-center max-md:pt-4 pt-7 ">
+                        <button onclick="informationblog()"
+                            class=" border-1  font-semibold max-md:py-1 max-md:px-1.5 max-md:text-[7px]  max-md:font-medium max-md:rounded-sm    rounded-lg  py-2 px-7 cursor-pointer opacity-0 transition-all duration-2000 transform max-md:my-1 translate-y-0 "
+                            id="clicked">Calculate <i
+                                class="fa-solid fa-right-to-bracket max-md:ml-0  ml-1.5"></i></button>
+                        <button onclick="formatblog()"
+                            class=" border-1  font-semibold hidden max-md:py-1 max-md:px-1.5 max-md:text-[7px]  max-md:font-medium max-md:rounded-sm max-md:my-1 rounded-lg  py-2 px-7 cursor-pointer opacity-0 transition-all duration-2000 transform "
+                            id="newcalculate">Calculate <i
+                                class="fa-solid fa-right-to-bracket   max-md:ml-0  ml-1.5 ml-1.5"></i></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The SVG -->
+        <img class="bg-[#111827] max-md:w-screen" src="/assets/images/curver.svg" alt="">
+
+
+        <!-- The Calculater -->
+        <div id="formContainer"
+            class=" calories-calculator  max-md:my-6 flex justify-center overflow-hidden max-h-[100px] align-middle  transition-all duration-500 ease-out">
+
+            <div class=" user-info-form m-7 max-md:m-0 flex-row justify-center block ">
+
+                <h1 class="text-5xl max-md:text-2xl max-md:py-8  transition-all duration-2000  opacity-0 translate-y-0 font-semibold font bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-900 bg-clip-text text-transparent "
+                    id="Helo-User">
+                    Hello Hritik</h1>
+
+            </div>
+
+            <form
+                class=" font-sans max-md:p-6 max-md:rounded-xl max-md:mt-3 max-md:mb-7 max-md:mx-0 mx-90 my-3 p-7 relative hidden opacity-0 rounded-3xl border-gray-300 shadow-xl shadow-[#5b5b5caf] border-1  transition-all duration-500 ease-in-out translate-y-0 "
+                id="generalinfo">
+                <div class="transition-all duration-3000 delay-200 ease-in-out ">
+
+                    <label class=" max-md:mb-0 max-md:text-[12px] mb-3 text-[#111827] font-semibold text-lg " for="">Age
+                    </label>
+                    <label for="" class="text-[#e95a18]  font-lighter px-0.5 text-sm max-md:text-[7px]">list your
+                        age 15
+                        - 18</label>
+                    <input
+                        class="userinputage w-full rounded-md border border-[#e0e0e0] bg-white my-2 py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#000000] focus:shadow-lg  rounded-sm max-md:px-1 max-md:px-0 max-md:py-1 max-md:text-[8px] max-md:my-0"
+                        type="number" name="" value="" id="  " placeholder="  Your Age" min="15" max="80">
+                </div>
+                <div>
+
+                    <label class="text-[#111827] font-semibold text-lg  max-md:p-0 max-md:text-[12px]"
+                        for="">Height</label>
+                    <label for="" class="text-[#e95a18] font-lighter px-0.5 text-sm max-md:text-[7px]">list your
+                        height
+                        in cm</label>
+                    <input
+                        class=" userinputheight  w-full rounded-md border border-[#e0e0e0] bg-white my-2 py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#000000] focus:shadow-lg max-md:py-1 max-md:px-0 max-md:text-[8px] max-md:px-1 max-md:my-0 rounded-sm"
+                        type="number" name="" id=" " placeholder="  Your Height " required>
+                </div>
+                <div>
+
+                    <label class="text-[#111827] font-semibold text-lg  max-md:p-0 max-md:text-[12px]" class=""
+                        for="">Weight</label>
+                    <input
+                        class="userinputweight w-full rounded-md border border-[#e0e0e0] bg-white my-2 py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#000000] focus:shadow-lg  max-md:py-1 max-md:px-0 max-md:text-[8px] rounded-sm max-md:my-0 max-md:px-1"
+                        type="number" name="" id="   " placeholder="   Your Weight" min="1" required>
+                </div>
+                <div class="flex justify-evenly align-middle my-2 max-md:my-2">
+                    <label class="  text-[#111827] font-semibold  text-lg w-[40%] max-md:w-[50%] max-md:text-[13px]"
+                        for="">Gender</label>
+                    <input class="userinputgender  max-md:h-2 max-md:mt-1.5" type="radio" name="gender" value="male"
+                        id="male">
+                    <label
+                        class="  text-[#111827] font-semibold text-lg w-[30%] ml-2  max-md:w-[25%] max-md:ml-0.5  max-md:mt-0.5 max-md:text-[10px]"
+                        for="">Male</label>
+                    <input class="userinputgender   max-md:h-2 max-md:mt-1.5" type="radio" name="gender" value="female"
+                        id="female">
+                    <label
+                        class="text-[#111827] font-semibold text-lg w-[30%] ml-2 max-md:w-[25%] max-md:ml-1 max-md:text-[10px] max-md:mt-0.5"
+                        for="">Female</label>
+
+                </div>
+                <div class="flex justify-center align-middle">
+
+                    <p onclick="validateInput()" id="activitystatus" type=" submit "
+                        class="font-semibold text-white text-center border-2 bg-[#111827] m-5 py-2 px-7 cursor-pointer rounded-lg  w-[60%] max-md:px-3  max-md:w-[50%] max-md:m-1  max-md:py-1 max-md:text-[10px] max-md:rounded-md">
+                        Next</p>
+                </div>
+
+                <div id="inputmessage"
+                    class="transition-all duration-5000 ease-in opacity-0 absolute flex  bottom-0 right-4/12 left-3/10 hidden max-md:left-3/10 max-md:right-10/20">
+                    <h2
+                        class="  transition-all duration-5000 opacity-100 ease-in bg-[#e01a13] rounded-t-lg px-10 py-2 whitespace-nowrap text-gray-50  max-md:text-[8px] max-md:rounded-t-md max-md:px-5 max-md:py-1">
+                        Please fill all inputs</h2>
+                </div>
+            </form>
+
+            <form id="activity"
+                class=" font-sans transition-all  delay-1000 duration-5000 ease-in-out opacity-0  mx-90  rounded-3xl border-gray-300 shadow-xl shadow-[#5b5b5caf] border-1   my-3 p-7   justify-center hidden align-middle max-md:p-6 max-md:rounded-xl max-md:mt-3 max-md:mb-7 max-md:mx-8"
+                action="#" method="post">
+                <div id="activitylevel" class=" transition-all duration-5000 ease-in-out">
+
+
+                    <h3 class="text-[#111827] font-semibold text-lg max-md:mb-0 max-md:text-[12px]">Select the
+                        statement
+                        that best describes your usual
+                        activity level.</h3>
+
+                    <div class="m-4 max-md:m-2  ">
+                        <div class="p-2 max-md:p-1 flex justify-start align-middle ">
+                            <input class="useractivation max-md:w-2 "
+                                value="Inactive: Never or rarely include physical activity in your day." type="radio"
+                                name="activity" id="">
+                            <label class="px-2  max-md:text-[8px] max-md:px-1.5" for="">
+                                Inactive: Never or rarely include physical activity in your day.</label>
+                        </div>
+                        <div class=" p-2  max-md:p-1 flex justify-start align-middle">
+                            <input class="useractivation max-md:w-2 " value="Somewhat active: Include light activity or moderate activity about two to three times a
+                                week." type="radio" name="activity" id="">
+                            <label class="px-2 max-md:text-[8px] max-md:px-1.5" for="">
+                                Somewhat active: Include light activity or moderate activity about two to three
+                                times a
+                                week.</label>
+                        </div>
+                        <div class=" p-2 max-md:p-1 flex justify-start align-middle">
+                            <input class="mb-5.5 max-md:mb-0 max-md:w-2 " value="Active: Include at least 30 minutes of moderate activity most days of the week, or
+                                20 minutes of vigorous activity at least three days a week." type="radio"
+                                name="activity" id="">
+                            <label class="px-2 max-md:p-1 max-md:text-[8px] max-md:px-1.5" for="">
+                                Active: Include at least 30 minutes of moderate activity most days of the week, or
+                                20 minutes of vigorous activity at least three days a week.</label>
+                        </div>
+                        <div class="p-2 max-md:p-1 flex justify-start align-middle">
+                            <input class="useractivation max-md:w-2 "
+                                value="Very active: Include large amounts of moderate or vigorous activity in your day"
+                                type="radio" name="activity" id="">
+                            <label class="px-2 max-md:text-[8px] max-md:px-1.5" for="">Very active: Include large
+                                amounts of moderate or vigorous
+                                activity
+                                in your day</label>
+                        </div>
+
+                    </div>
+
+                    <div class="flex justify-center align-middle">
+                        <p onclick="fetchdata()" id="Result" type="button"
+                            class="  font-semibold text-center text-white border-2 bg-[#111827]  py-2 px-7 cursor-pointer rounded-lg  w-[55%]  max-md:text-[8px] max-md:rounded-t-md max-md:px-5 max-md:py-1">
+                            Next</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- The Notice -->
+        <div class=" calories-note flex translate-y-4 opacity-0 align-middle  transition-all duration-700 max-h-0 ease-in justify-around max-md:block max-md:mx-18 "
+            id="resultcards">
+            <div>
+                <div class="relative bg-gray-900 transition-all duration-200  block p-6 border border-gray-100 rounded-lg max-w-sm mx-auto mt-13 max-md:mt-0 max-md:py-2 max-md:px-5"
+                    id="card-first">
+
+                    <span
+                        class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+
+                    <div class="my-4 ">
+                        <h2 class="text-white text-2xl font-bold pb-2 max-md:p-1 max-md:text-lg" id="firstcardtitle">
+                        </h2>
+                        <p class="text-gray-300 py-1 max-md:text-[10px] " id="firstcardmsg">To lose fat, your
+                            maintenance
+                            calories.</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div>
+                <div class="relative bg-gray-900 transition-all duration-200 block p-6 border border-gray-100 rounded-lg max-w-sm mx-auto mt-20 max-md:mt-5 max-md:py-2 max-md:px-5"
+                    id="card-second">
+
+                    <span
+                        class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+
+                    <div class="my-4">
+                        <h2 class="text-white text-2xl font-bold pb-2 max-md:p-1 max-md:text-lg" id="secondcardtitle">
+                            Card
+                            Title</h2>
+                        <p class="text-gray-300 py-1 max-md:text-[10px]">To maintain your current weight, your estimated
+                            maintenance calories.</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div>
+                <div class="relative bg-gray-900 transition-all duration-200 block p-6 border border-gray-100 rounded-lg max-w-sm mx-auto mt-16 max-md:mt-5 max-md:py-2 max-md:px-5"
+                    id="card-third">
+
+                    <span
+                        class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+
+                    <div class="my-4">
+                        <h2 class="text-white text-2xl font-bold pb-2  max-md:p-1 max-md:text-lg" id="thirdcardtitle">
+                            Card
+                            Title</h2>
+                        <p class="text-gray-300 py-1 max-md:text-[10px]">To gain weight, your maintenance calories.</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div
+            class="footer bg-[#111827]  max-md:py-10 max-md:px-4 py-10 mt-10 px-25 transition-all duration-700 ease-in">
+            <div id="footerdata" class="opacity-0 transition-all duration-700 ease-in ">
+
+
+                <div class="heading">
+                    <h1 class="text-4xl max-md:text-xl text-white font-semibold">
+                        <i
+                            class="fa-solid fa-puzzle-piece text-3xl max-md:text-lg max-md:rounded-sm max-md:p-1 p-2 bg-[#3d5afe] rounded-xl  "></i>
+                        Tailwindow
+                    </h1>
+                </div>
+
+                <div class="sub-heading max-md:text-[11px] text-[#bcc4ce] my-10 max-md:my-6 max-md:pr-0 pr-20">
+                    Tailwindow is a collection of UI Components created using Tailwind CSS Framework. The UI Components
+                    gives
+                    you all of the building blocks you need to build any designs without any annoying opinionated styles
+                    you
+                    have to fight to override.
+                </div>
+
+                <div class=" flex justify-evenly align-middle max-md:block">
+                    <div class="card text-[#bcc4ce] max-md:mb-12 max-md:mt-8 ">
+
+                        <h2
+                            class="text-2xl mb-4 border-b-4 border-blue-600 pb-4 max-md:pb-2 max-md:text-center   max-md:text-lg max-md:mb-2 ">
+                            Company</h2>
+
+
+
+                        <div class="plan-info py-3 max-md:py-1 ">
+                            <ul
+                                class="  text-[#bcc4ce] max-md:text-[11px] max-md:gap-7  max-md:flex max-md:justify-center max-md:align-middle ">
+                                <li class=" ">About Us</li>
+                                <li class="py-1 max-md:py-0 ">Terms & Conditions</li>
+                                <li class="py-1 max-md:py-0 ">Privacy Policy</li>
+                                <li class="py-1 max-md:py-0">Contact Us</li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card  text-[#bcc4ce]  ">
+
+                        <h2
+                            class="text-3xl max-md:text-lg  text-center max-md:mb-2.5  mb-4 border-b-4 border-blue-600 pb-4 max-md:pb-2 ">
+                            Connection With Us </h2>
+
+                        <div class="plan-info">
+                            <ul
+                                class=" flex justify-between align-middle  items-center max-md:justify-center max-md:m-0 m-3 max-md:gap-5 ">
+                                <li
+                                    class="border border-gray-100 py-2 px-3 max-md:py-0 max-md:pb-1 max-md:px-2  rounded-full mx-1">
+                                    <i class=" text-xl max-md:text-[12px] fa-brands fa-instagram"></i>
+                                </li>
+                                <li
+                                    class="border border-gray-100 rounded-full py-2  max-md:pb-1 max-md:py-0 max-md:px-2 px-3 mx-1">
+                                    <i class=" text-xl max-md:text-[12px] fa-brands fa-square-facebook"></i>
+                                </li>
+                                <li
+                                    class="border border-gray-100 rounded-full py-2 max-md:pb-1 max-md:py-0 max-md:px-2  px-3 mx-1">
+                                    <i class=" text-xl max-md:text-[12px] fa-brands fa-github"></i>
+                                </li>
+                                <li
+                                    class="border border-gray-100 rounded-full py-2 max-md:pb-1 max-md:py-0 max-md:px-2 px-3 mx-1">
+                                    <i class=" text-xl max-md:text-[12px] fa-brands fa-youtube"></i>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Button -->
+        <div class="scroll-btn  fixed bottom-0  right-0 mx-3 my-3 " id="scrollButton">
+            <button
+                class=" text-grey transition-all duration-200  border-2 border-transparent sm:w-auto rounded-xl font-pj hover:bg-gray-600 focus:outline-none max-md:bg-amber-100 max-md:text-sm  bg-[#ffffff] max-md:py-1 max-md:px-2.5 py-2 px-4"
+                type="button"><i class="fa-solid fa-arrow-up "></i></button>
+        </div>
+
+
+    </div>
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
