@@ -32,10 +32,11 @@
 </style>
 
 <body class=" m-0 p-0 relative">
-    <div id="dragmenu" class="  bg-[#1213139c] transition-all duration-1000  absolute left-[-100%] z-10 w-full h-full">
+    <div id="dragmenu" class="  bg-[#1213139c] transition-all duration-1000  absolute left-[-100%]  z-10 w-full h-full">
         <div id="disablemenu"
-            class=" pt-1 ring-2 ring-[#a5a2a2b4] pb-0.5 px-2.5 rounded-full float-end  box-border mx-3 my-3 bg-amber-50 text-center">
-            <i class=" font-light fa-solid fa-xmark text-[15px] "></i></div>
+            class=" pt-1 ring-2 opacity-0 transition-all duration-700 ease-in ring-[#a5a2a2b4] pb-0.5 px-2.5 rounded-full right-0 fixed  box-border mx-3 my-3 bg-amber-50 text-center">
+            <i class=" font-light fa-solid fa-xmark text-[15px] "></i>
+        </div>
         <ul id="menuchange"
             class="  font-semibold  text-white max-md:fixed w-full top-1/2 bottom-1/2   max-md:flex z-30 max-md:justify-center max-md:flex-col max-md:align-middle   text-center  text-xl gap-30  ">
 
@@ -49,43 +50,50 @@
 
     </div>
     <div id="main-container">
-        <div class="inner-container bg-[#111827] py-3 max-md:w-screen">
+        <div class="inner-container bg-[#111827] py-3 max-md:py-4 max-md:w-screen">
 
             <!-- The Header -->
             <div class="footer-section transition-all duration-600  max-md:justify-between translate-y-[-150%] flex justify-around align-middle text-xl max-md:text-sm max-md:px-3 font-bold text-white max-md:h-full"
                 id="top-bar">
                 <ul class="flex ">
-                    <li id="menubtn" class="max-md:block hidden max-md:mt-0.5 max-md:invert max-md:mr-2  font-medium whitespace-nowrap ">
+                    <li id="menubtn"
+                        class="max-md:block hidden max-md:mt-0.5 max-md:invert max-md:mr-2  font-medium whitespace-nowrap ">
                         <img class=" text-amber-50" src="/assets/images/menu.svg" alt="" srcset="">
                     </li>
-                    <li class=" max-md:mt-0.5 font-medium whitespace-nowrap "><a href="./index.html">Calories
-                            Calculater</a></li>
+                    <li class=" max-md:mt-0.5 font-medium whitespace-nowrap  max-md:text-md  "><a
+                            href="./index.html">Calibalance</a></li>
                 </ul>
                 <ul id="menuoption"
-                    class="flex font-normal max-md:hidden  max-md:absolute    max-md:bg-amber-400    max-md:px-0 justify-around align-middle text-lg gap-13 py-1.5 px-[200px] ">
+                    class="flex font-normal max-md:hidden  max-md:absolute    max-md:bg-amber-400    max-md:px-0 justify-around align-middle text-lg gap-13  px-[200px] ">
 
-                    <li class=" cursor-pointer"><a href="./index.html">Home</a></li>
-                    <li onclick="window.location.href= './src/plans.html?passkey=true'" class="  cursor-pointer">Plans
+                    <li
+                        class="py-1.5 transition-all duration-300 easy-in-out px-2.5 cursor-pointer hover:bg-[#b7b9bd86] rounded-lg">
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li onclick="window.location.href= './src/plans.html?passkey=true'"
+                        class="py-1.5 px-2.5 transition-all duration-300 easy-in-out hover:bg-[#b7b9bd86] rounded-lg cursor-pointer">
+                        Plans
                     </li>
                     <li onclick="window.location.href= './src/food_search.html?highlight=true'" id="foodsection"
-                        class=" cursor-pointer">Search Food</li>
+                        class="py-1.5 px-2 transition-all duration-300 easy-in-out hover:bg-[#b7b9bd86] rounded-lg cursor-pointer">
+                        Search Food</li>
                 </ul>
 
                 <ul>
                     <button
-                        class="font-medium  max-md:px-2 max-md:py-0.5 max-md:text-[10px]  max-md:rounded-md border-2 py-1.5  px-4  rounded-xl border-amber-50 whitespace-nowrap text-black bg-amber-50 ">
+                        class="font-medium hover:text-amber-50 hover:bg-[#111827] max-md:px-2.5 max-md:py-0.5  max-md:text-[12px]  max-md:rounded-md ring-2 py-1.5 transition-all hover:ring-0 duration-400  ease-out  px-4  rounded-xl border-amber-50 whitespace-nowrap text-black bg-amber-50 ">
                         <a href="/login.html">Log In</a> </button>
                 </ul>
             </div>
 
             <!-- The Main Heading -->
             <div class="Main-heading text-center    ">
-                <div class="text-5xl max-md:text-xl font-bold opacity-0 text-white font-mono pt-3 pb-5 transition-all duration-500 transform translate-y-0 "
+                <div class="text-5xl max-md:text-2xl font-bold opacity-0 text-white font-mono pt-6 pb-5 transition-all duration-500 transform translate-y-0 "
                     id="upper-heading">
                     PHAMILY
                 </div>
-                <div class="text-center  text-white font-normal px-70 max-md:px-13 ">
-                    <p class="opacity-0 max-md:text-[7px] transition-all duration-800 transform translate-y-0"
+                <div class="text-center  text-white font-normal px-70 max-md:px-10 ">
+                    <p class="opacity-0 max-md:text-[12px] transition-all duration-800 transform translate-y-0"
                         id="sub-heading">Over 70%
                         of deaths in India are due to
                         non-communicable
@@ -93,15 +101,15 @@
                         million
                         Indians are undernourished, making malnutrition a major public health concern (FAO, 2023).
                     </p>
-                    <div class="button text-white  flex justify-center max-md:pt-4 pt-7 ">
+                    <div class="button text-white  flex justify-center max-md:pt-7 pt-7 max-md:pb-6">
                         <button onclick="informationblog()"
-                            class=" border-1  font-semibold max-md:py-1 max-md:px-1.5 max-md:text-[7px]  max-md:font-medium max-md:rounded-sm    rounded-lg  py-2 px-7 cursor-pointer opacity-0 transition-all duration-2000 transform max-md:my-1 translate-y-0 "
+                            class=" border-1  hover:shadow-lg/20 hover:ring-2 shadow-sky-100 font-semibold max-md:py-1.5 max-md:px-2 max-md:text-[13px]  max-md:font-medium max-md:rounded-lg    rounded-lg  py-2 px-7 cursor-pointer opacity-0 transition-all duration-2000 transform max-md:my-1 translate-y-0 "
                             id="clicked">Calculate <i
                                 class="fa-solid fa-right-to-bracket max-md:ml-0  ml-1.5"></i></button>
                         <button onclick="formatblog()"
-                            class=" border-1  font-semibold hidden max-md:py-1 max-md:px-1.5 max-md:text-[7px]  max-md:font-medium max-md:rounded-sm max-md:my-1 rounded-lg  py-2 px-7 cursor-pointer opacity-0 transition-all duration-2000 transform "
+                            class=" border-1 hover:shadow-lg/20 hover:ring-2 shadow-sky-100  font-semibold hidden max-md:py-1.5 max-md:px-2 max-md:text-[13px]  max-md:font-medium max-md:rounded-lg max-md:my-1 rounded-lg  py-2 px-7 cursor-pointer opacity-0 transition-all duration-2000 transform "
                             id="newcalculate">Calculate <i
-                                class="fa-solid fa-right-to-bracket   max-md:ml-0  ml-1.5 ml-1.5"></i></button>
+                                class="fa-solid fa-right-to-bracket   max-md:ml-0  ml-1.5 "></i></button>
 
                     </div>
                 </div>
@@ -114,11 +122,11 @@
 
         <!-- The Calculater -->
         <div id="formContainer"
-            class=" calories-calculator  max-md:my-6 flex justify-center overflow-hidden max-h-[100px] align-middle  transition-all duration-500 ease-out">
+            class=" calories-calculator  max-md:my-30 flex justify-center overflow-hidden max-h-[100px] align-middle  transition-all duration-500 ease-out my-30">
 
             <div class=" user-info-form m-7 max-md:m-0 flex-row justify-center block ">
 
-                <h1 class="text-5xl max-md:text-2xl max-md:py-8  transition-all duration-2000  opacity-0 translate-y-0 font-semibold font bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-900 bg-clip-text text-transparent "
+                <h1 class="text-5xl max-md:text-3xl max-md:py-8  transition-all duration-2000  opacity-0 translate-y-0 font-semibold font bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-900 bg-clip-text text-transparent "
                     id="Helo-User">
                     Hello Hritik</h1>
 
@@ -244,16 +252,16 @@
         </div>
 
         <!-- The Notice -->
-        <div class=" calories-note flex translate-y-4 opacity-0 align-middle  transition-all duration-700 max-h-0 ease-in justify-around max-md:block max-md:mx-18 "
+        <div class=" calories-note flex translate-y-4 opacity-0 align-middle mb-20  transition-all duration-700 max-h-0 ease-in justify-around max-md:block max-md:mx-18 "
             id="resultcards">
             <div>
-                <div class="relative bg-gray-900 transition-all duration-200  block p-6 border border-gray-100 rounded-lg max-w-sm mx-auto mt-13 max-md:mt-0 max-md:py-2 max-md:px-5"
+                <div class="relative hover:shadow-2xl hover:scale-102  shadow-gray-900 bg-gray-900 transition-all duration-1000 easy-in block p-6 border border-gray-100 rounded-lg max-w-sm mx-auto mt-13 max-md:mt-0 max-md:py-2 max-md:px-5"
                     id="card-first">
 
                     <span
                         class="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
 
-                    <div class="my-4 ">
+                    <div class="my-4 transition-all duration-1000 easy-in">
                         <h2 class="text-white text-2xl font-bold pb-2 max-md:p-1 max-md:text-lg" id="firstcardtitle">
                         </h2>
                         <p class="text-gray-300 py-1 max-md:text-[10px] " id="firstcardmsg">To lose fat, your
@@ -265,7 +273,7 @@
                 </div>
             </div>
             <div>
-                <div class="relative bg-gray-900 transition-all duration-200 block p-6 border border-gray-100 rounded-lg max-w-sm mx-auto mt-20 max-md:mt-5 max-md:py-2 max-md:px-5"
+                <div class="relative hover:shadow-2xl hover:scale-102  shadow-gray-900 bg-gray-900 transition-all duration-1000 block p-6 border easy-in  border-gray-100 rounded-lg max-w-sm mx-auto mt-20 max-md:mt-5 max-md:py-2 max-md:px-5"
                     id="card-second">
 
                     <span
@@ -283,7 +291,7 @@
                 </div>
             </div>
             <div>
-                <div class="relative bg-gray-900 transition-all duration-200 block p-6 border border-gray-100 rounded-lg max-w-sm mx-auto mt-16 max-md:mt-5 max-md:py-2 max-md:px-5"
+                <div class="relative  bg-gray-900 hover:shadow-2xl hover:scale-102  shadow-gray-900 transition-all duration-1000 block p-6 border easy-in  border-gray-100 rounded-lg max-w-sm mx-auto mt-13 max-md:mt-5 max-md:py-2 max-md:px-5"
                     id="card-third">
 
                     <span
@@ -311,16 +319,16 @@
                     <h1 class="text-4xl max-md:text-xl text-white font-semibold">
                         <i
                             class="fa-solid fa-puzzle-piece text-3xl max-md:text-lg max-md:rounded-sm max-md:p-1 p-2 bg-[#3d5afe] rounded-xl  "></i>
-                        Tailwindow
+                        Calibalance
                     </h1>
                 </div>
 
                 <div class="sub-heading max-md:text-[11px] text-[#bcc4ce] my-10 max-md:my-6 max-md:pr-0 pr-20">
-                    Tailwindow is a collection of UI Components created using Tailwind CSS Framework. The UI Components
-                    gives
-                    you all of the building blocks you need to build any designs without any annoying opinionated styles
-                    you
-                    have to fight to override.
+                    “Stay in control of your health with our Maintenance Calorie Calculator. Easily calculate how many
+                    calories you need to maintain your weight and keep your energy levels high. Whether your goal is to
+                    stay fit, improve your diet, or track your macros, we provide accurate insights tailored to your
+                    body and lifestyle. Maintain your weight the smart way with the right balance of protein, carbs, and
+                    fats every day.”
                 </div>
 
                 <div class=" flex justify-evenly align-middle max-md:block">
@@ -335,10 +343,10 @@
                         <div class="plan-info py-3 max-md:py-1 ">
                             <ul
                                 class="  text-[#bcc4ce] max-md:text-[11px] max-md:gap-7  max-md:flex max-md:justify-center max-md:align-middle ">
-                                <li class=" ">About Us</li>
-                                <li class="py-1 max-md:py-0 ">Terms & Conditions</li>
-                                <li class="py-1 max-md:py-0 ">Privacy Policy</li>
-                                <li class="py-1 max-md:py-0">Contact Us</li>
+                                <li class=" cursor-pointer  ">About Us</li>
+                                <li class="py-1 max-md:py-0  cursor-pointer ">Terms & Conditions</li>
+                                <li class="py-1 max-md:py-0  cursor-pointer ">Privacy Policy</li>
+                                <li class="py-1 max-md:py-0 cursor-pointer ">Contact Us</li>
 
                             </ul>
                         </div>
@@ -352,21 +360,21 @@
 
                         <div class="plan-info">
                             <ul
-                                class=" flex justify-between align-middle  items-center max-md:justify-center max-md:m-0 m-3 max-md:gap-5 ">
+                                class=" flex justify-between align-middle  items-center max-md:justify-center max-md:m-0 m-3 max-md:gap-5  ">
                                 <li
-                                    class="border border-gray-100 py-2 px-3 max-md:py-0 max-md:pb-1 max-md:px-2  rounded-full mx-1">
+                                    class="border cursor-pointer   border-gray-100 py-2 px-3 max-md:py-0 max-md:pb-1 max-md:px-2  rounded-full mx-1">
                                     <i class=" text-xl max-md:text-[12px] fa-brands fa-instagram"></i>
                                 </li>
                                 <li
-                                    class="border border-gray-100 rounded-full py-2  max-md:pb-1 max-md:py-0 max-md:px-2 px-3 mx-1">
+                                    class="border cursor-pointer  border-gray-100 rounded-full py-2  max-md:pb-1 max-md:py-0 max-md:px-2 px-3 mx-1">
                                     <i class=" text-xl max-md:text-[12px] fa-brands fa-square-facebook"></i>
                                 </li>
                                 <li
-                                    class="border border-gray-100 rounded-full py-2 max-md:pb-1 max-md:py-0 max-md:px-2  px-3 mx-1">
+                                    class="border cursor-pointer  border-gray-100 rounded-full py-2 max-md:pb-1 max-md:py-0 max-md:px-2  px-3 mx-1">
                                     <i class=" text-xl max-md:text-[12px] fa-brands fa-github"></i>
                                 </li>
                                 <li
-                                    class="border border-gray-100 rounded-full py-2 max-md:pb-1 max-md:py-0 max-md:px-2 px-3 mx-1">
+                                    class="border cursor-pointer  border-gray-100 rounded-full py-2 max-md:pb-1 max-md:py-0 max-md:px-2 px-3 mx-1">
                                     <i class=" text-xl max-md:text-[12px] fa-brands fa-youtube"></i>
                                 </li>
 
@@ -387,24 +395,7 @@
 
     </div>
     <script src="/assets/js/main.js"></script>
-    <script type="text/javascript">
-    (function (l) {
-      if (l.search[1] === "/") {
-        var decoded = l.search
-          .slice(1)
-          .split("&")
-          .map(function (s) {
-            return s.replace(/and/g, "&");
-          })
-          .join("?");
-        window.history.replaceState(
-          null,
-          null,
-          l.pathname.slice(0, -1) + decoded + l.hash
-        );
-      }
-    })(window.location);
-  </script>
+
 
 </body>
 

@@ -1,4 +1,4 @@
-ckedarrow = document.querySelector(".sign");
+const arrow = document.querySelector(".sign");
 
 function disclosefacts() {
   arrow.addEventListener("click", function () {
@@ -78,7 +78,11 @@ if (document.getElementById("food_macro")?.innerText == '') {
 }
 
 function searchfood(params) {
-    if(document.getElementById("food_macro").innerText != '') {
+
+     window.scrollTo({    top: document.body.scrollHeight, behavior: "smooth" });
+   
+ 
+  if(document.getElementById("food_macro").innerText != '') {
     document.getElementById("food_macro").classList.remove("hidden");
     document.getElementById("food_macro").classList.add("block");
 }
@@ -104,7 +108,6 @@ if (proteinFoods[input]) {
     foodprotein.innerHTML = ""
 }
 
-console.log('Completed');
 
 }
 
@@ -232,6 +235,11 @@ if (passkey == "true") {
   document.getElementById("plansec").classList.toggle("text-shadow-xs")
     document.getElementById("plansec").classList.toggle("text-shadow-white")
   document.getElementById("plansec").classList.toggle("underline-offset-8")
+  document.getElementById("headerplansec").classList.toggle("underline")
+  document.getElementById("headerplansec").classList.toggle("text-[#635252]")
+  document.getElementById("headerplansec").classList.toggle("text-shadow-xs")
+    document.getElementById("headerplansec").classList.toggle("text-shadow-white")
+  document.getElementById("headerplansec").classList.toggle("underline-offset-8")
   document.getElementById("first-card")?.classList.remove("opacity-0");
   document.getElementById("second-card")?.classList.remove("opacity-0");
   document.getElementById("third-card")?.classList.remove("opacity-0");
@@ -284,6 +292,11 @@ if (heighlight == "true") {
     document.getElementById("foodsection").classList.toggle("text-shadow-xs")
     document.getElementById("foodsection").classList.toggle("text-shadow-white")
   document.getElementById("foodsection").classList.toggle("underline-offset-8")
+    document.getElementById("headsearchfood").classList.toggle("underline")
+    document.getElementById("headsearchfood").classList.toggle("text-[#635252]")
+    document.getElementById("headsearchfood").classList.toggle("text-shadow-xs")
+    document.getElementById("headsearchfood").classList.toggle("text-shadow-white")
+  document.getElementById("headsearchfood").classList.toggle("underline-offset-8")
   document.getElementById("search_bar")?.classList.remove("opacity-0");
   document.getElementById("search_bar")?.classList.add("translate-y-4");
   document.getElementById("food-section-heading").classList.remove("opacity-0");
@@ -434,6 +447,7 @@ const crossbtn = document.getElementById("disablemenu")
 
 menu?.addEventListener("click" , () => {
   document.getElementById("main-container")?.classList.add("blur-sm" , "transition-all" , "duration-1000")
+  document.getElementById("disablemenu").classList.toggle("opacity-0")
   if (passkey == "true") {
     
     document.getElementById("plain-container")?.classList.add("blur-sm" , "transition-all" , "duration-1000")
@@ -450,6 +464,7 @@ menu?.addEventListener("click" , () => {
 
 crossbtn?.addEventListener("click" , () => {
   
+  
     document.getElementById("main-container")?.classList.remove("blur-sm" , "transition-all" , "duration-1000")
     if (passkey == "true") {
       
@@ -461,6 +476,7 @@ crossbtn?.addEventListener("click" , () => {
     }
   document.getElementById("dragmenu")?.classList.toggle("left-[-100%]")
   document.getElementById("dragmenu")?.classList.toggle("left-0")
+  document.getElementById("disablemenu").classList.toggle("opacity-0")
 
 }
 )

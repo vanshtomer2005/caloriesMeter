@@ -44,317 +44,317 @@
 </style>
 
 <body class="m-0 p-0 relative">
-        <div class="  ">
-         <div id="dragmenu" class=" bg-[#807d7d88] transition-all duration-1000 absolute left-[-100%] z-20 w-full h-full">
-   <div id="disablemenu" class=" pt-1 ring-2 ring-[#a5a2a2b4] pb-0.5 px-2.5 rounded-full float-end  box-border mx-3 my-3 bg-amber-50 text-center"><i class=" font-light fa-solid fa-xmark text-[15px] "></i></div>
-        <ul id="menuchange"
-        class="  font-semibold  text-black max-md:fixed w-full top-1/2 bottom-1/2   max-md:flex z-30 max-md:justify-center max-md:flex-col max-md:align-middle   text-center  text-xl gap-30  ">
+    <div class="  ">
+        <div id="dragmenu"
+            class=" bg-[#807d7d88] transition-all duration-1000 absolute left-[-100%] z-20 w-full h-full">
+        <div id="disablemenu"
+            class=" pt-1 ring-2 opacity-0 transition-all duration-700 ease-in ring-[#a5a2a2b4] pb-0.5 px-2.5 rounded-full right-0 fixed  box-border mx-3 my-3 bg-amber-50 text-center">
+            <i class=" font-light fa-solid fa-xmark text-[15px] "></i>
+        </div>
+            <ul id="menuchange"
+                class="  font-semibold  text-black max-md:fixed w-full top-1/2 bottom-1/2   max-md:flex z-30 max-md:justify-center max-md:flex-col max-md:align-middle   text-center  text-xl gap-30  ">
 
-        <li class=" cursor-pointer"><a href="../index.html">Home</a></li>
-        <li onclick="window.location.href= 'plans.html?passkey=true'" class="  cursor-pointer">Plans</li>
-        <li onclick="window.location.href= 'food_search.html?highlight=true'"  class=" cursor-pointer">
-            Search Food</li>
-    </ul>
-    </div>
-    <div class="bg-[url('/assets/images/subtle-prismee.png')] relative bg-cover w-full transition-all duration-700 ease-in-out">
-
-        <!-- <div id="dragmenu" class=" bg-[#1213139c] transition-all duration-700 absolute  z-30 w-full h-screen"></div> -->
-        <!-- <div id="disablemenu" class="m-4 text-end"><i class="fa-solid fa-xmark text-lg invert"></i></div>
-        <ul id="menuchange"
-            class="  font-semibold  text-white max-md:fixed w-full top-1/2 bottom-1/2   max-md:flex z-40 max-md:justify-center max-md:flex-col max-md:align-middle   text-center  text-xl gap-30  ">
-
-            <li class=" cursor-pointer"><a href="./index.html">Home</a></li>
-            <li onclick="window.location.href= 'plans.html?passkey=true'" class="  cursor-pointer">Plans</li>
-            <li onclick="window.location.href= 'food_search.html?highlight=true'" id="foodsection"
-                class=" cursor-pointer">
-                Search Food</li>
-        </ul> -->
+                <li class=" cursor-pointer"><a href="../index.html">Home</a></li>
+                <li onclick="window.location.href= 'plans.html?passkey=true'" class="  cursor-pointer">Plans</li>
+                <li onclick="window.location.href= 'food_search.html?highlight=true'" id="headsearchfood"
+                    class=" cursor-pointer">
+                    Search Food</li>
+            </ul>
+        </div>
+        <div
+            class="bg-[url('/assets/images/subtle-prismee.png')] relative bg-cover w-full transition-all duration-700 ease-in-out">
 
 
-        <div id="searchfood-container">
-            <div class=" bg-[#c3bcb6] z-10 relative footer-section transition-transform duration-600 translate-y-[-150%] flex justify-evenly align-middle text-xl font-bold py-3 text-white max-md:justify-between  max-md:text-sm max-md:px-3"
-                id="top-bar">
-                <ul class="flex justify-center  my-1.5 align-middle">
-                    <li id="menubtn" class=" max-md:block hidden max-md:mt-0.5 max-md:invert max-md:mr-2  font-medium whitespace-nowrap ">
-                        <img class=" text-amber-50" src="/assets/images/menu.svg" alt="" srcset="">
-                    </li>
-                    <li class="font-medium text-black "><a href="../index.html">Calories Calculater</a></li>
-                </ul>
-                <ul
-                    class="flex  max-md:hidden w-[60%] my-1.5 justify-around align-middle text-lg  max-md:absolute max-md:left-[-50%]  max-md:top-0 max-md:px-0  ">
-                    <div class="flex font-normal text-black gap-10 mr-10 max-md:block">
-
-                        <li class=" cursor-pointer flex justify-center align-middle"><a href="index.html">Home</a>
+            <div id="searchfood-container">
+                <div class=" bg-[#c3bcb6] z-10 relative footer-section transition-transform duration-600 translate-y-[-150%] flex justify-evenly align-middle text-xl font-bold py-3 text-white max-md:justify-between  max-md:text-sm max-md:px-3"
+                    id="top-bar">
+                    <ul class="flex justify-center  my-1.5 align-middle">
+                        <li id="menubtn"
+                            class=" max-md:block hidden  max-md:invert max-md:mr-2  font-medium whitespace-nowrap ">
+                            <img class=" text-amber-50" src="/assets/images/menu.svg" alt="" srcset="">
                         </li>
-                        <li id="plansec" onclick="window.location.href= 'plans.html?passkey=true'"
-                            class="  cursor-pointer flex justify-center align-middle">Plans</li>
-                        <li onclick="window.location.href= 'food_search.html?highlight=true'" id="foodsection"
-                            class=" cursor-pointer flex justify-center align-middle">Search Food</li>
-                    </div>
-                </ul>
-
-                <ul>
-                    <button
-                        class="font-medium border-2 text-black  px-4 py-1.5 rounded-xl border-amber-50 shadow-inner shadow-black text-black-50/500 bg-amber-50 ">
-                        <a href="/login.html">Log In</a> </button>
-                </ul>
-            </div>
-
-            <!-- The Inner-container -->
-            <div class="search-container  ">
-
-                <!-- The Search-Bar -->
-                <div id="search_bar"
-                    class=" transition-all duration-700 ease-in-out  opacity-0 flex justify-center  align-center p-25   max-md:p-15">
-                    <input
-                        class=" bg-[#e2d9d2] py-4 pl-10 shadow-2xl shadow-black/75  pr-96 rounded-2xl placeholder:text-gray-950 outline-0  border-0 max-md:py-2 max-md:pl-6 max-md:pr-6 max-md:rounded-lg max-md:text-[13px] "
-                        type="text" name="query" id="user-food" placeholder="Search..." />
-                    <button type="button" onclick="searchfood()"
-                        class=" bg-[#eade35]  rounded-lg  p-2 pl-5 pr-5 cursor-pointer ml-3 max-md:py-1 max-md:px-3 max-md:text-sm"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-
-                <!-- The Food Section -->
-                <div class="   ">
-                    <div id="food-section-heading"
-                        class="transition-all duration-1000 ease-in-out opacity-0 flex justify-center align-center ">
-                        <h1 class="text-3xl text-[#0d2b44] font-semibold font-serif text-shadow-lg/20  max-md:text-2xl">
-                            General Nutrition Table</h1>
-                    </div>
-                    <div id="protein-heading"
-                        class="transition-all duration-1000 ease-in-out opacity-0 translate-y-0 flex justify-center align-center p-10 max-md:p-7">
-                        <h1 class="text-2xl text-[#313030] font-mono max-md:text-lg">Protein Description</h1>
-                    </div>
-                    <div id="proteinfood"
-                        class="food-table transition-all duration-1000 ease-in-out translate-y-0 opacity-0  ">
-                        <table class=" flex justify-center text-xl max-md:text-[12px] max-md:mx-6">
-
-                            <tr>
-                                <th>Food Items</th>
-                                <th>Per 100g/serving</th>
-                                <th>Per g/serving</th>
-                            </tr>
-                            <tr>
-                                <td> Chicken Breast</td>
-                                <td> 31g</td>
-                                <td>0.31g</td>
-                            </tr>
-                            <tr>
-                                <td>Eggs (whole)</td>
-                                <td>13g</td>
-                                <td>0.13g</td>
-                            </tr>
-                            <tr>
-                                <td>Paneer </td>
-                                <td>18g</td>
-                                <td>0.18g</td>
-                            </tr>
-                            <tr>
-                                <td>Lentils</td>
-                                <td>9g</td>
-                                <td>0.09g</td>
-                            </tr>
-                            <tr>
-                                <td>Almonds</td>
-                                <td>21g</td>
-                                <td>0.21g</td>
-                            </tr>
-                            <tr>
-                                <td>Milk (Cow, whole)</td>
-                                <td>3.2g</td>
-                                <td>0.032g</td>
-                            </tr>
-                            <tr>
-                                <td>Greek Yogurt</td>
-                                <td>10g</td>
-                                <td>0.10g</td>
-                            </tr>
-                            <tr>
-                                <td>Soya Chunks </td>
-                                <td>52g</td>
-                                <td>0.52g
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Tofu</td>
-                                <td>8g</td>
-                                <td>0.08g</td>
-                            </tr>
-                            <tr>
-                                <td>Fish (Salmon)</td>
-                                <td>20g</td>
-                                <td>0.20g</td>
-                            </tr>
-
-
-
-
-
-                        </table>
-                    </div>
-
-
-                    <div id="carbs-heading"
-                        class="translate-y-0 transition-all duration-1000 ease-in-out opacity-0 flex justify-center align-center p-10 max-md:p-7">
-                        <h1 class="text-2xl text-[#313030] font-mono  max-md:text-lg">Carbohydrate Description</h1>
-                    </div>
-                    <div id="carbsfood" class="food-table transition-all duration-1000 ease-in-out opacity-0 ">
-                        <table class=" flex justify-center text-xl ">
-
-                            <tr>
-                                <th>Food Items</th>
-                                <th>Per 100g/serving</th>
-                                <th>Per g/serving</th>
-                            </tr>
-                            <tr>
-                                <td> Chicken Breast</td>
-                                <td> 31g</td>
-                                <td>0.31g</td>
-                            </tr>
-                            <tr>
-                                <td>Eggs (whole)</td>
-                                <td>13g</td>
-                                <td>0.13g</td>
-                            </tr>
-                            <tr>
-                                <td>Paneer </td>
-                                <td>18g</td>
-                                <td>0.18g</td>
-                            </tr>
-                            <tr>
-                                <td>Lentils</td>
-                                <td>9g</td>
-                                <td>0.09g</td>
-                            </tr>
-                            <tr>
-                                <td>Almonds</td>
-                                <td>21g</td>
-                                <td>0.21g</td>
-                            </tr>
-                            <tr>
-                                <td>Milk (Cow, whole)</td>
-                                <td>3.2g</td>
-                                <td>0.032g</td>
-                            </tr>
-                            <tr>
-                                <td>Greek Yogurt</td>
-                                <td>10g</td>
-                                <td>0.10g</td>
-                            </tr>
-                            <tr>
-                                <td>Soya Chunks </td>
-                                <td>52g</td>
-                                <td>0.52g
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Tofu</td>
-                                <td>8g</td>
-                                <td>0.08g</td>
-                            </tr>
-                            <tr>
-                                <td>Fish (Salmon)</td>
-                                <td>20g</td>
-                                <td>0.20g</td>
-                            </tr>
-
-
-
-
-
-                        </table>
-                    </div>
-                    <div id="fat-heading"
-                        class="translate-y-0  transition-all duration-1000 ease-in-out opacity-0 food-section-heading flex justify-center align-center p-10 max-md:p-7">
-                        <h1 class="text-2xl text-[#313030] font-mono max-md:text-lg ">Fats Description</h1>
-                    </div>
-                    <div id="fatyfood" class="transition-all duration-1000 ease-in-out opacity-0 ">
-                        <table class=" flex justify-center text-xl ">
-
-                            <tr>
-                                <th>Food Items</th>
-                                <th>Per 100g/serving</th>
-                                <th>Per g/serving</th>
-                            </tr>
-                            <tr>
-                                <td> Chicken Breast</td>
-                                <td> 31g</td>
-                                <td>0.31g</td>
-                            </tr>
-                            <tr>
-                                <td>Eggs (whole)</td>
-                                <td>13g</td>
-                                <td>0.13g</td>
-                            </tr>
-                            <tr>
-                                <td>Paneer </td>
-                                <td>18g</td>
-                                <td>0.18g</td>
-                            </tr>
-                            <tr>
-                                <td>Lentils</td>
-                                <td>9g</td>
-                                <td>0.09g</td>
-                            </tr>
-                            <tr>
-                                <td>Almonds</td>
-                                <td>21g</td>
-                                <td>0.21g</td>
-                            </tr>
-                            <tr>
-                                <td>Milk (Cow, whole)</td>
-                                <td>3.2g</td>
-                                <td>0.032g</td>
-                            </tr>
-                            <tr>
-                                <td>Greek Yogurt</td>
-                                <td>10g</td>
-                                <td>0.10g</td>
-                            </tr>
-                            <tr>
-                                <td>Soya Chunks </td>
-                                <td>52g</td>
-                                <td>0.52g
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Tofu</td>
-                                <td>8g</td>
-                                <td>0.08g</td>
-                            </tr>
-                            <tr>
-                                <td>Fish (Salmon)</td>
-                                <td>20g</td>
-                                <td>0.20g</td>
-                            </tr>
-
-
-
-
-
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Searched Food-section -->
-            <div id="calories-note" class="  p-6 z-0 opacity-0 transition-all duration-1000 ease-in-out  max-md:p-5">
-                <div class="heading flex justify-center     ">
-                    <h1 class="bg-[#eade35] text-2xl p-5 rounded-xl max-md:text-sm max-md:p-2 max-md:rounded-lg "
-                        id="serched_item">The Searched Food</h1>
-                </div>
-                <div class="note-border z-10  bg-gray-100 rounded-2xl m-9 max-md:m-3 transition-all duration-700 ease-in-out shadow-xl shadow-blue-900/50  max-md:rounded-lg max-md:p-2"
-                    id="food_macro">
-                    <h2 class=" text-2xl text-indigo-950 p-2 font-semibold max-md:text-[13px]" id="food-title"></h2>
-                    <ul class=" text-lg ml-8 max-md:ml-6" id="listtype">
-                        <li class="max-md:text-[10px]" id="food-description"></li>
-                        <li class="max-md:text-[10px]" id="food-protein"></li>
-                        <li class="max-md:text-[10px]" id="food-calories"></li>
+                        <li class="font-medium text-black  max-md:text-md  "><a href="../index.html">Calibalance</a></li>
                     </ul>
+                    <ul
+                        class="flex  max-md:hidden w-[60%]  justify-around align-middle text-lg  max-md:absolute max-md:left-[-50%]  max-md:top-0 max-md:px-0  ">
+                        <div class="flex font-normal text-black gap-10 mr-10 max-md:block">
+
+                            <li
+                                class="py-1.5 px-2 transition-all rounded-lg duration-300 easy-in-out hover:bg-[#f5f5f5d3] cursor-pointer flex justify-center align-middle">
+                                <a href="../index.html">Home</a>
+                            </li>
+                            <li id="plansec" onclick="window.location.href= 'plans.html?passkey=true'"
+                                class=" py-1.5 px-2 transition-all  rounded-lg duration-300 easy-in-out hover:bg-[#f5f5f5d3] cursor-pointer flex justify-center align-middle">
+                                Plans</li>
+                            <li onclick="window.location.href= 'food_search.html?highlight=true'" id="foodsection"
+                                class=" py-1.5 px-2 transition-all rounded-lg duration-300 easy-in-out hover:bg-[#f5f5f5d3] cursor-pointer flex justify-center align-middle">
+                                Search Food</li>
+                        </div>
+                    </ul>
+
+                    <ul>
+                        <button
+                            class="font-medium ring-1 text-black hover:ring-0 hover:bg-[#ffd294]  max-md:ring-0  px-4 py-1.5 rounded-xl border-amber-50  shadow-inner shadow-black text-black-50/500  bg-amber-50 max-md:px-2.5 max-md:py-1 max-md:mt-0.5 max-md:text-[12px]  max-md:rounded-md ">
+                            <a href="/login.html">Log In</a> </button>
+                    </ul>
+                </div>
+
+                <!-- The Inner-container -->
+                <div class="search-container  ">
+
+                    <!-- The Search-Bar -->
+                    <div id="search_bar"
+                        class=" transition-all duration-700 ease-in-out  opacity-0 flex justify-center  align-center p-25   max-md:p-15">
+                        <input
+                            class=" bg-[#e2d9d2] py-4 pl-10 shadow-2xl shadow-black/75  pr-96 rounded-2xl placeholder:text-gray-950 outline-0  border-0 max-md:py-2 max-md:pl-6 max-md:pr-6 max-md:rounded-lg max-md:text-[13px] "
+                            type="text" name="query" id="user-food" placeholder="Search..." />
+                        <button id="searchbtn" type="button" onclick="searchfood()"
+                            class=" bg-[#eade35]  rounded-lg  p-2 pl-5 pr-5 cursor-pointer ml-3 max-md:py-1 max-md:px-3 max-md:text-sm"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+
+                    <!-- The Food Section -->
+                    <div class="   ">
+                        <div id="food-section-heading"
+                            class="transition-all duration-1000 ease-in-out opacity-0 flex justify-center align-center ">
+                            <h1
+                                class="text-3xl text-[#0d2b44] font-semibold font-serif text-shadow-lg/20  max-md:text-2xl">
+                                General Nutrition Table</h1>
+                        </div>
+                        <div id="protein-heading"
+                            class="transition-all duration-1000 ease-in-out opacity-0 translate-y-0 flex justify-center align-center p-10 max-md:p-7">
+                            <h1 class="text-2xl text-[#313030] font-mono max-md:text-lg">Protein Description</h1>
+                        </div>
+                        <div id="proteinfood"
+                            class="food-table transition-all duration-1000 ease-in-out translate-y-0 opacity-0  ">
+                            <table class=" flex justify-center text-xl max-md:text-[12px] max-md:mx-6">
+
+                                <tr>
+                                    <th>Food Items</th>
+                                    <th>Per 100g/serving</th>
+                                    <th>Per g/serving</th>
+                                </tr>
+                                <tr>
+                                    <td> Chicken Breast</td>
+                                    <td> 31g</td>
+                                    <td>0.31g</td>
+                                </tr>
+                                <tr>
+                                    <td>Eggs (whole)</td>
+                                    <td>13g</td>
+                                    <td>0.13g</td>
+                                </tr>
+                                <tr>
+                                    <td>Paneer </td>
+                                    <td>18g</td>
+                                    <td>0.18g</td>
+                                </tr>
+                                <tr>
+                                    <td>Lentils</td>
+                                    <td>9g</td>
+                                    <td>0.09g</td>
+                                </tr>
+                                <tr>
+                                    <td>Almonds</td>
+                                    <td>21g</td>
+                                    <td>0.21g</td>
+                                </tr>
+                                <tr>
+                                    <td>Milk (Cow, whole)</td>
+                                    <td>3.2g</td>
+                                    <td>0.032g</td>
+                                </tr>
+                                <tr>
+                                    <td>Greek Yogurt</td>
+                                    <td>10g</td>
+                                    <td>0.10g</td>
+                                </tr>
+                                <tr>
+                                    <td>Soya Chunks </td>
+                                    <td>52g</td>
+                                    <td>0.52g
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tofu</td>
+                                    <td>8g</td>
+                                    <td>0.08g</td>
+                                </tr>
+                                <tr>
+                                    <td>Fish (Salmon)</td>
+                                    <td>20g</td>
+                                    <td>0.20g</td>
+                                </tr>
+
+
+
+
+
+                            </table>
+                        </div>
+
+
+                        <div id="carbs-heading"
+                            class="translate-y-0 transition-all duration-1000 ease-in-out opacity-0 flex justify-center align-center p-10 max-md:p-7">
+                            <h1 class="text-2xl text-[#313030] font-mono  max-md:text-lg">Carbohydrate Description</h1>
+                        </div>
+                        <div id="carbsfood" class="food-table transition-all duration-1000 ease-in-out opacity-0 ">
+                            <table class=" flex justify-center text-xl ">
+
+                                <tr>
+                                    <th>Food Items</th>
+                                    <th>Per 100g/serving</th>
+                                    <th>Per g/serving</th>
+                                </tr>
+                                <tr>
+                                    <td> Chicken Breast</td>
+                                    <td> 0g</td>
+                                    <td>0g</td>
+                                </tr>
+                                <tr>
+                                    <td>Eggs (whole)</td>
+                                    <td>1.1g</td>
+                                    <td>0.011g</td>
+                                </tr>
+                                <tr>
+                                    <td>Paneer </td>
+                                    <td>3.4g</td>
+                                    <td>0.034g</td>
+                                </tr>
+                                <tr>
+                                    <td>Lentils</td>
+                                    <td>20g</td>
+                                    <td>0.20g</td>
+                                </tr>
+                                <tr>
+                                    <td>Almonds</td>
+                                    <td>22g</td>
+                                    <td>22g</td>
+                                </tr>
+                                <tr>
+                                    <td>Milk (Cow, whole)</td>
+                                    <td>5g</td>
+                                    <td>0.05g</td>
+                                </tr>
+                                <tr>
+                                    <td>Greek Yogurt</td>
+                                    <td>4g</td>
+                                    <td>0.04g</td>
+                                </tr>
+                                <tr>
+                                    <td>Soya Chunks </td>
+                                    <td>33g</td>
+                                    <td>0.33g</td>
+                                </tr>
+                                <tr>
+                                    <td>Tofu</td>
+                                    <td>2g</td>
+                                    <td>0.02g</td>
+                                </tr>
+                                <tr>
+                                    <td>Fish (Salmon)</td>
+                                    <td>0g</td>
+                                    <td>0.00g</td>
+                                </tr>
+
+
+
+
+
+                            </table>
+                        </div>
+                        <div id="fat-heading"
+                            class="translate-y-0  transition-all duration-1000 ease-in-out opacity-0 food-section-heading flex justify-center align-center p-10 max-md:p-7">
+                            <h1 class="text-2xl text-[#313030] font-mono max-md:text-lg ">Fats Description</h1>
+                        </div>
+                        <div id="fatyfood" class="transition-all duration-1000 ease-in-out opacity-0 ">
+                            <table class=" flex justify-center text-xl ">
+
+                                <tr>
+                                    <th>Food Items</th>
+                                    <th>Per 100g/serving</th>
+                                    <th>Per g/serving</th>
+                                </tr>
+                                <tr>
+                                    <td> Chicken Breast</td>
+                                    <td>3.6g</td>
+                                    <td>0.036g</td>
+                                </tr>
+                                <tr>
+                                    <td>Eggs (whole)</td>
+                                    <td>11g</td>
+                                    <td>0.11g</td>
+                                </tr>
+                                <tr>
+                                    <td>Paneer </td>
+                                    <td> 20g</td>
+                                    <td> 0.20g</td>
+                                </tr>
+                                <tr>
+                                    <td>Lentils</td>
+                                    <td> 0.4g</td>
+                                    <td> 0.004g</td>
+                                </tr>
+                                <tr>
+                                    <td>Almonds</td>
+                                    <td> 49g</td>
+                                    <td> 0.49g</td>
+                                </tr>
+                                <tr>
+                                    <td>Milk (Cow, whole)</td>
+                                    <td> 3.7g</td>
+                                    <td>0.037g</td>
+                                </tr>
+                                <tr>
+                                    <td>Greek Yogurt</td>
+                                    <td> 0.4g</td>
+                                    <td> 0.004g</td>
+                                </tr>
+                                <tr>
+                                    <td>Soya Chunks </td>
+                                    <td> 0.5g</td>
+                                    <td> 0.005g
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tofu</td>
+                                    <td>4.8g</td>
+                                    <td> 0.048g</td>
+                                </tr>
+                                <tr>
+                                    <td>Fish (Salmon)</td>
+                                    <td> 13g</td>
+                                    <td> 0.13g</td>
+                                </tr>
+
+
+
+
+
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Searched Food-section -->
+                <div id="calories-note"
+                    class="  p-6 z-0 opacity-0 transition-all duration-1000 ease-in-out  max-md:p-5">
+                    <div class="heading flex justify-center     ">
+                        <h1 class="bg-[#eade35] text-2xl p-5 rounded-xl max-md:text-sm max-md:p-2 max-md:rounded-lg "
+                            id="serched_item">The Searched Food</h1>
+                    </div>
+                    <div class="note-border z-10  bg-gray-100 rounded-2xl m-9 max-md:m-3 transition-all duration-700 ease-in-out shadow-xl shadow-blue-900/50  max-md:rounded-lg max-md:p-2"
+                        id="food_macro">
+                        <h2 class=" text-2xl text-indigo-950 p-2 font-semibold max-md:text-[13px]" id="food-title"></h2>
+                        <ul class=" text-lg ml-8 max-md:ml-6" id="listtype">
+                            <li class="max-md:text-[10px]" id="food-description"></li>
+                            <li class="max-md:text-[10px]" id="food-protein"></li>
+                            <li class="max-md:text-[10px]" id="food-calories"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 <script src="/assets/js/main.js"></script>
 
