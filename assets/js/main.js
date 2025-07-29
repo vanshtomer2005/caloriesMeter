@@ -447,7 +447,13 @@ const crossbtn = document.getElementById("disablemenu")
 
 menu?.addEventListener("click" , () => {
   document.getElementById("main-container")?.classList.add("blur-sm" , "transition-all" , "duration-1000")
+  setTimeout(() => {
+      document.getElementById("disablemenu").classList.toggle("hidden")
+
   document.getElementById("disablemenu").classList.toggle("opacity-0")
+  document.getElementById("disablemenu").classList.toggle("opacity-100%")
+  }, 1000);
+
   if (passkey == "true") {
     
     document.getElementById("plain-container")?.classList.add("blur-sm" , "transition-all" , "duration-1000")
@@ -477,6 +483,8 @@ crossbtn?.addEventListener("click" , () => {
   document.getElementById("dragmenu")?.classList.toggle("left-[-100%]")
   document.getElementById("dragmenu")?.classList.toggle("left-0")
   document.getElementById("disablemenu").classList.toggle("opacity-0")
+  document.getElementById("disablemenu").classList.toggle("block")
+  document.getElementById("disablemenu").classList.toggle("hidden")
 
 }
 )
